@@ -10,6 +10,8 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
   -[Webserver Playbook](Webserver-Playbook)
   
+  -[Elkserver Playbook](Elkserver-Playbook)
+  
   -[Filebeat Playbook](Filebeat-Playbook)
   
   -[Metricbeat Playbook](Metricbeat-Playbook)
