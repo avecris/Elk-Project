@@ -31,8 +31,8 @@ Load balancing ensures that the application will be highly available, in additio
 - Load balancers make controlling access to a network easier, by making traffic directed to the webservers pass through one machine.  This means that security controls put onto the load balancer ensure that all the machines behind it are protected.  This is an advantage of only allowing SSH access to the machines via a single 'Jump Box' machine.  As long as you properly control access to the jumpbox, you control access to all the machines behind it._
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the permissions and system files.
-- _Filebeat collects log files on a machine and sends them on to a system that can collect and analyse them._
-- __Metricbeat collects metrics system metrics like CPU usage and disk usage and also forwards them on to a system which can collect and analyse the data.
+- Filebeat collects log files on a machine and sends them on to a system that can collect and analyse them.
+- Metricbeat collects metrics system metrics like CPU usage and disk usage and also forwards them on to a system which can collect and analyse the data.
 
 The configuration details of each machine may be found below.
 | Name       | Function            | IP Address | OS    |
@@ -65,10 +65,10 @@ A summary of the access policies in place can be found in the table below.
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it allows the process to be easily repeatable without errors.  
 
-The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+The Filebeat playbook implements the following tasks:
+- 
+- 
+- 
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
