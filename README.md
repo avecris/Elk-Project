@@ -4,7 +4,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-[Network Diagram](images/Network-Diagram1.png)
+[Network Diagram](images/Network-Diagram.pdf)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -45,8 +45,8 @@ The machines on the internal network are not exposed to the public Internet.
 Only the Load balancer accepts HTTP connections from the Internet.  However, the Jump box machine accepts ssh connections over the internet, and the Elk Server accepts http connections via port 5601. 
 - 1.136.108.44
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by the Jump Box.
+- I only allowed the Jump Box machine to provide ssh access to the Elk Server.
 
 A summary of the access policies in place can be found in the table below.
 
@@ -59,8 +59,7 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it allows the process to be easily repeatable without errors.  
 
 The playbook implements the following tasks:
 - _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
@@ -73,10 +72,12 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+- Web 1: 10.0.0.5
+- Web 2: 10.0.0.6
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+- Web 1: 10.0.0.5
+- Web 2: 10.0.0.6
 
 These Beats allow us to collect the following information from each machine:
 - _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
