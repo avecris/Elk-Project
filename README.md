@@ -67,14 +67,17 @@ A summary of the access policies in place can be found in the table below.
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it allows the process to be easily repeatable without errors.  
 
-The Filebeat playbook implements the following tasks:
-- 
-- 
-- 
+The Elkserver playbook implements the following tasks:
+- Installs the Docker service
+- Installs the Python3-Pip service
+- Installs a Docker Module onto the container
+- Changes the value vm.max_map_count in the systemctl configuration file to "262144"
+- Downloads and launches the image of a Docker container
+- Enables the Docker service
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+[Screenshot after running `docker ps`](images/)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
